@@ -68,6 +68,8 @@
 		E25B9A3321AB953600411C88 /* LEMUtility */ = {
 			isa = PBXGroup;
 			children = (
+				E25B9A5621AB971200411C88 /* LEMUtility.h */,
+				E25B9A4A21AB954500411C88 /* Alert */,
 				E25B9A5721ABCA6100411C88 /* Main */,
 				E25B9A3421AB953600411C88 /* AppDelegate.h */,
 				E25B9A3521AB953600411C88 /* AppDelegate.m */,
@@ -114,8 +116,6 @@
 		E25B9A5721ABCA6100411C88 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				E25B9A5621AB971200411C88 /* LEMUtility.h */,
-				E25B9A4A21AB954500411C88 /* Alert */,
 			);
 			path = Main;
 			sourceTree = "<group>";

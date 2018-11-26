@@ -8,7 +8,14 @@ Pod::Spec.new do |s|
   # s.social_media_url   = "http://twitter.com/Himin" # 个人主页
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/veenveenveen/LEMUtility.git", :tag => "#{s.version}" }
-  s.source_files  = "LEMUtility/Main/*.{h,m}"
+  #s.source_files  = "LEMUtility/Main/**/*.{h,m}"
   s.frameworks   = "UIKit", "Foundation" #支持的框架
   s.requires_arc = true # 是否启用ARC
+
+  s.public_header_files = 'LEMUtility/LEMUtility.h'
+
+  s.subspec 'Alert' do |ss|
+    ss.source_files = 'LEMUtility/Alert/*.{h,m}'
+  end
+
 end
