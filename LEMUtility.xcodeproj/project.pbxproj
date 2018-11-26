@@ -18,6 +18,7 @@
 		E25B9A5521AB95D400411C88 /* XYZOrbitView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A5421AB95D400411C88 /* XYZOrbitView.m */; };
 		E2EDB7FD21ABED620027B427 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EDB7FB21ABED620027B427 /* UIColor+HexColor.m */; };
 		E2EDB80021ABEECD0027B427 /* NSString+LEM.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EDB7FF21ABEECD0027B427 /* NSString+LEM.m */; };
+		E2EDB80221AC08AF0027B427 /* LEMUtility.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2EDB80121AC08AF0027B427 /* LEMUtility.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E2EDB7FC21ABED620027B427 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
 		E2EDB7FE21ABEECD0027B427 /* NSString+LEM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LEM.h"; sourceTree = "<group>"; };
 		E2EDB7FF21ABEECD0027B427 /* NSString+LEM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LEM.m"; sourceTree = "<group>"; };
+		E2EDB80121AC08AF0027B427 /* LEMUtility.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LEMUtility.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				E25B9A5621AB971200411C88 /* LEMUtility.h */,
 				E25B9A4A21AB954500411C88 /* Alert */,
 				E25B9A5721ABCA6100411C88 /* Main */,
+				E2EDB80121AC08AF0027B427 /* LEMUtility.bundle */,
 				E25B9A3421AB953600411C88 /* AppDelegate.h */,
 				E25B9A3521AB953600411C88 /* AppDelegate.m */,
 				E25B9A3721AB953600411C88 /* ViewController.h */,
@@ -198,6 +201,7 @@
 				E25B9A4121AB953700411C88 /* LaunchScreen.storyboard in Resources */,
 				E25B9A3E21AB953700411C88 /* Assets.xcassets in Resources */,
 				E25B9A3C21AB953600411C88 /* Main.storyboard in Resources */,
+				E2EDB80221AC08AF0027B427 /* LEMUtility.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

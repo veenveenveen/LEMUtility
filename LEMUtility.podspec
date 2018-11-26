@@ -15,11 +15,16 @@ Pod::Spec.new do |s|
   s.source_files = 'LEMUtility/LEMUtility.h'
   s.public_header_files = 'LEMUtility/LEMUtility.h'
 
-#s.resource     = 'LEMUtility/LEMUtility.bundle'
+  s.resource     = 'LEMUtility/LEMUtility.bundle'
 #s.resources    = 'LEMUtility/**/*.{png,bundle}'
 
   s.subspec 'Alert' do |ss|
     ss.source_files = 'LEMUtility/Alert/**/*.{h,m}'
+    ss.dependency 'LEMUtility/Category'
+  end
+
+  s.subspec 'Category' do |ss|
+    ss.source_files = 'LEMUtility/Category/**/*.{h,m}'
   end
 
 end
