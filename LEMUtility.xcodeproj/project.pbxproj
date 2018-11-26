@@ -78,6 +78,7 @@
 			children = (
 				E25B9A5621AB971200411C88 /* LEMUtility.h */,
 				E25B9A4A21AB954500411C88 /* Alert */,
+				E2EDB7FA21ABED3A0027B427 /* Category */,
 				E25B9A5721ABCA6100411C88 /* Main */,
 				E25B9A5821ABE17100411C88 /* LEMUtility.bundle */,
 				E25B9A3421AB953600411C88 /* AppDelegate.h */,
@@ -100,7 +101,6 @@
 				E25B9A4E21AB95C000411C88 /* HMLoading.m */,
 				E25B9A4C21AB95A300411C88 /* XYZOrbitView */,
 				E25B9A4B21AB959900411C88 /* SandClock */,
-				E2EDB7FA21ABED3A0027B427 /* Category */,
 			);
 			path = Alert;
 			sourceTree = "<group>";

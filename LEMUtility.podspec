@@ -20,10 +20,11 @@ Pod::Spec.new do |s|
 
   s.subspec 'Alert' do |ss|
     ss.source_files = 'LEMUtility/Alert/**/*.{h,m}'
+    ss.dependency 'LEMUtility/Category'
   end
 
-#s.subspec 'Category' do |ss|
-#  ss.source_files = 'LEMUtility/Category/**/*.{h,m}'
-# end
+  s.subspec 'Category' do |ss|
+    ss.source_files = 'LEMUtility/Category/**/*.{h,m}'
+  end
 
 end
