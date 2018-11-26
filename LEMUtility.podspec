@@ -22,8 +22,8 @@ Pod::Spec.new do |s|
     ss.source_files = 'LEMUtility/Alert/**/*.{h,m}'
   end
 
-  s.subspec 'Category' do |ss|
-    ss.source_files = 'LEMUtility/Category/**/*.{h,m}'
-  end
+#s.subspec 'Category' do |ss|
+#  ss.source_files = 'LEMUtility/Category/**/*.{h,m}'
+# end
 
 end
