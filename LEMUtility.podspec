@@ -6,16 +6,16 @@ Pod::Spec.new do |s|
   s.license      = "MIT" # 开源证书
   s.author             = { "Himin" => "745685567@qq.com" } # 作者信息
   # s.social_media_url   = "http://twitter.com/Himin" # 个人主页
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/veenveenveen/LEMUtility.git", :tag => "#{s.version}" }
-  #s.source_files  = "LEMUtility/Main/**/*.{h,m}"
+
   s.frameworks   = "UIKit", "Foundation" #支持的框架
   s.requires_arc = true # 是否启用ARC
 
   s.source_files = 'LEMUtility/LEMUtility.h'
   s.public_header_files = 'LEMUtility/LEMUtility.h'
 
-  s.resources    = "LEMUtility/Resources/LEMUtility.bundle"
+  s.resources = 'LEMUtility/LEMUtility.bundle'
 
   s.subspec 'Alert' do |ss|
     ss.source_files = 'LEMUtility/Alert/**/*.{h,m}'

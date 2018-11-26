@@ -16,6 +16,7 @@
 		E25B9A4F21AB95C000411C88 /* HMLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A4E21AB95C000411C88 /* HMLoading.m */; };
 		E25B9A5221AB95CC00411C88 /* SandClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A5121AB95CC00411C88 /* SandClockView.m */; };
 		E25B9A5521AB95D400411C88 /* XYZOrbitView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A5421AB95D400411C88 /* XYZOrbitView.m */; };
+		E25B9A5921ABE17100411C88 /* LEMUtility.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E25B9A5821ABE17100411C88 /* LEMUtility.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		E25B9A5321AB95D400411C88 /* XYZOrbitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOrbitView.h; sourceTree = "<group>"; };
 		E25B9A5421AB95D400411C88 /* XYZOrbitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOrbitView.m; sourceTree = "<group>"; };
 		E25B9A5621AB971200411C88 /* LEMUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEMUtility.h; sourceTree = "<group>"; };
+		E25B9A5821ABE17100411C88 /* LEMUtility.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LEMUtility.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				E25B9A5621AB971200411C88 /* LEMUtility.h */,
 				E25B9A4A21AB954500411C88 /* Alert */,
 				E25B9A5721ABCA6100411C88 /* Main */,
+				E25B9A5821ABE17100411C88 /* LEMUtility.bundle */,
 				E25B9A3421AB953600411C88 /* AppDelegate.h */,
 				E25B9A3521AB953600411C88 /* AppDelegate.m */,
 				E25B9A3721AB953600411C88 /* ViewController.h */,
@@ -180,6 +183,7 @@
 				E25B9A4121AB953700411C88 /* LaunchScreen.storyboard in Resources */,
 				E25B9A3E21AB953700411C88 /* Assets.xcassets in Resources */,
 				E25B9A3C21AB953600411C88 /* Main.storyboard in Resources */,
+				E25B9A5921ABE17100411C88 /* LEMUtility.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
