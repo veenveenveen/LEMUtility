@@ -17,6 +17,8 @@
 		E25B9A5221AB95CC00411C88 /* SandClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A5121AB95CC00411C88 /* SandClockView.m */; };
 		E25B9A5521AB95D400411C88 /* XYZOrbitView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A5421AB95D400411C88 /* XYZOrbitView.m */; };
 		E25B9A5921ABE17100411C88 /* LEMUtility.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E25B9A5821ABE17100411C88 /* LEMUtility.bundle */; };
+		E2EDB7FD21ABED620027B427 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EDB7FB21ABED620027B427 /* UIColor+HexColor.m */; };
+		E2EDB80021ABEECD0027B427 /* NSString+LEM.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EDB7FF21ABEECD0027B427 /* NSString+LEM.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		E25B9A5421AB95D400411C88 /* XYZOrbitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZOrbitView.m; sourceTree = "<group>"; };
 		E25B9A5621AB971200411C88 /* LEMUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEMUtility.h; sourceTree = "<group>"; };
 		E25B9A5821ABE17100411C88 /* LEMUtility.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LEMUtility.bundle; sourceTree = "<group>"; };
+		E2EDB7FB21ABED620027B427 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
+		E2EDB7FC21ABED620027B427 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		E2EDB7FE21ABEECD0027B427 /* NSString+LEM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LEM.h"; sourceTree = "<group>"; };
+		E2EDB7FF21ABEECD0027B427 /* NSString+LEM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LEM.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 			children = (
 				E25B9A5621AB971200411C88 /* LEMUtility.h */,
 				E25B9A4A21AB954500411C88 /* Alert */,
+				E2EDB7FA21ABED3A0027B427 /* Category */,
 				E25B9A5721ABCA6100411C88 /* Main */,
 				E25B9A5821ABE17100411C88 /* LEMUtility.bundle */,
 				E25B9A3421AB953600411C88 /* AppDelegate.h */,
@@ -121,6 +128,17 @@
 			children = (
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		E2EDB7FA21ABED3A0027B427 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E2EDB7FC21ABED620027B427 /* UIColor+HexColor.h */,
+				E2EDB7FB21ABED620027B427 /* UIColor+HexColor.m */,
+				E2EDB7FE21ABEECD0027B427 /* NSString+LEM.h */,
+				E2EDB7FF21ABEECD0027B427 /* NSString+LEM.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2EDB7FD21ABED620027B427 /* UIColor+HexColor.m in Sources */,
 				E25B9A3921AB953600411C88 /* ViewController.m in Sources */,
+				E2EDB80021ABEECD0027B427 /* NSString+LEM.m in Sources */,
 				E25B9A5221AB95CC00411C88 /* SandClockView.m in Sources */,
 				E25B9A4F21AB95C000411C88 /* HMLoading.m in Sources */,
 				E25B9A4421AB953700411C88 /* main.m in Sources */,
