@@ -1,27 +1,28 @@
 //
-//  HMLoading.m
-//  TestAll
+//  LEMToast.m
+//  LEMUtility
 //
-//  Created by 黄启明 on 2018/11/6.
+//  Created by Himin on 2018/11/27.
 //  Copyright © 2018 Himin. All rights reserved.
 //
 
-#import "HMLoading.h"
+#import "LEMToast.h"
+
 #import "SandClockView.h"
 #import "XYZOrbitView.h"
 
 #import "UIColor+HexColor.h"
 #import "NSString+LEM.h"
 
-#define kUIScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kUIScreenHeight [UIScreen mainScreen].bounds.size.height
-#define kAPPKeyWindow [UIApplication sharedApplication].keyWindow
+#define pUIScreenWidth [UIScreen mainScreen].bounds.size.width
+#define pUIScreenHeight [UIScreen mainScreen].bounds.size.height
+#define pAPPKeyWindow [UIApplication sharedApplication].keyWindow
 
 static CGFloat maxWidth = 180;// 提示label视图的最大宽度
 
 static NSInteger waitingTime = 0;
 
-@implementation HMLoading
+@implementation LEMToast
 
 // 只显示文字 (时间默认)
 + (void)showToastWithText:(NSString *)text {
@@ -42,14 +43,14 @@ static NSInteger waitingTime = 0;
 
 // 只显示文字
 + (void)showToastWithText:(NSString *)text time:(NSTimeInterval)timeInterval {
-    UIView *bgView = [[UIView alloc] initWithFrame:kAPPKeyWindow.bounds];
+    UIView *bgView = [[UIView alloc] initWithFrame:pAPPKeyWindow.bounds];
     bgView.backgroundColor = UIColor.clearColor;
     bgView.alpha = 0;
-    [kAPPKeyWindow addSubview:bgView];
+    [pAPPKeyWindow addSubview:bgView];
     
     CGFloat width = 50;
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(kUIScreenWidth/2-40, kUIScreenHeight/2-width/2, 80, width)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(pUIScreenWidth/2-40, pUIScreenHeight/2-width/2, 80, width)];
     view.backgroundColor = [UIColor colorWithHexString:@"F6F6F6"];
     view.layer.cornerRadius = 6;
     [bgView addSubview:view];
@@ -74,7 +75,7 @@ static NSInteger waitingTime = 0;
     CGFloat viewWidth = width + gap * 2;
     CGFloat viewHeight = lab.frame.size.height + gap * 2;
     
-    view.frame = CGRectMake((kUIScreenWidth-viewWidth)/2, (kUIScreenHeight-viewHeight)/2, viewWidth, viewHeight);
+    view.frame = CGRectMake((pUIScreenWidth-viewWidth)/2, (pUIScreenHeight-viewHeight)/2, viewWidth, viewHeight);
     view.center = CGPointMake(bgView.center.x, bgView.center.y-50);
     
     view.transform = CGAffineTransformMakeScale(1.3, 1.3);
@@ -95,15 +96,15 @@ static NSInteger waitingTime = 0;
 
 // 显示图片和文字提示
 + (void)showToastWithText:(NSString *)text image:(UIImage *)image time:(NSTimeInterval)timeInterval {
-    UIView *bgView = [[UIView alloc] initWithFrame:kAPPKeyWindow.bounds];
+    UIView *bgView = [[UIView alloc] initWithFrame:pAPPKeyWindow.bounds];
     bgView.backgroundColor = UIColor.clearColor;
     bgView.alpha = 0;
-    [kAPPKeyWindow addSubview:bgView];
+    [pAPPKeyWindow addSubview:bgView];
     
     CGFloat width = 120;
     CGFloat height = 100;
     
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake((kUIScreenWidth-width)/2, (kUIScreenHeight-height)/2, width, height)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake((pUIScreenWidth-width)/2, (pUIScreenHeight-height)/2, width, height)];
     view.backgroundColor = [UIColor colorWithHexString:@"F6F6F6"];
     view.layer.cornerRadius = 10;
     [bgView addSubview:view];
@@ -151,7 +152,7 @@ static NSInteger waitingTime = 0;
     
     [view addSubview:imgV];
     
-    view.frame = CGRectMake((kUIScreenWidth-viewWidth)/2, (kUIScreenHeight-viewHeight)/2, viewWidth, viewHeight);
+    view.frame = CGRectMake((pUIScreenWidth-viewWidth)/2, (pUIScreenHeight-viewHeight)/2, viewWidth, viewHeight);
     view.center = CGPointMake(bgView.center.x, bgView.center.y-50);
     
     view.transform = CGAffineTransformMakeScale(1.3, 1.3);
@@ -172,22 +173,22 @@ static NSInteger waitingTime = 0;
 
 #pragma mark - Loading
 
-+ (void)showLoading:(HMLoadingStyle)loadingStyle {
++ (void)showLoading:(LEMLoadingStyle)loadingStyle {
     waitingTime += 1;
     if (waitingTime == 1) {
-        UIView *bgView = [[UIView alloc] initWithFrame:kAPPKeyWindow.bounds];
+        UIView *bgView = [[UIView alloc] initWithFrame:pAPPKeyWindow.bounds];
         bgView.backgroundColor = UIColor.clearColor;
         bgView.tag = 110;
-        [kAPPKeyWindow addSubview:bgView];
+        [pAPPKeyWindow addSubview:bgView];
         
         [self loadingViewOn:bgView withLoadingStyle:loadingStyle];
     }
 }
 
-+ (void)loadingViewOn:(UIView *)view withLoadingStyle:(HMLoadingStyle)loadingStyle {
++ (void)loadingViewOn:(UIView *)view withLoadingStyle:(LEMLoadingStyle)loadingStyle {
     CGFloat rectWidth = view.frame.size.width;
     CGFloat rectHeight = view.frame.size.height;
-    if (loadingStyle == HMLoadingStyleSystem) {
+    if (loadingStyle == LEMLoadingStyleSystem) {
         
         UIView *v = [[UIView alloc] initWithFrame:CGRectMake(rectWidth/2 - 30, rectHeight/2 - 30, 60, 60)];
         v.layer.cornerRadius = 10;
@@ -200,15 +201,15 @@ static NSInteger waitingTime = 0;
         
         [wait startAnimating];
         [view addSubview:v];
-
-    } else if (loadingStyle == HMLoadingStyleSandClock) {
+        
+    } else if (loadingStyle == LEMLoadingStyleSandClock) {
         
         SandClockView *sandView = [[SandClockView alloc] initWithFrame:CGRectMake(rectWidth*0.5-30, rectHeight*0.5-30, 60, 60)];
         sandView.tag = 112;
         [view addSubview:sandView];
         [sandView startAnimation];
         
-    } else if (loadingStyle == HMLoadingStyleOrbitView) {
+    } else if (loadingStyle == LEMLoadingStyleOrbitView) {
         
         XYZOrbitView *orbitView = [[XYZOrbitView alloc] initWithFrame:CGRectMake(rectWidth*0.5-30, rectHeight*0.5-30, 60, 60)];
         orbitView.tag = 113;
@@ -223,14 +224,14 @@ static NSInteger waitingTime = 0;
         waitingTime -= 1;
     }
     if (waitingTime == 0) {
-        if (kAPPKeyWindow.subviews.count > 0) {
-            for (UIView *view in kAPPKeyWindow.subviews) {
-//                if (view.tag == 112) {
-//                    if ([view isKindOfClass:[SandClockView class]]) {
-//                        [(SandClockView *)view stopAnimation];
-//                        [view removeFromSuperview];
-//                    }
-//                }
+        if (pAPPKeyWindow.subviews.count > 0) {
+            for (UIView *view in pAPPKeyWindow.subviews) {
+                //                if (view.tag == 112) {
+                //                    if ([view isKindOfClass:[SandClockView class]]) {
+                //                        [(SandClockView *)view stopAnimation];
+                //                        [view removeFromSuperview];
+                //                    }
+                //                }
                 if (view.tag == 110) {
                     [UIView animateWithDuration:0.25 animations:^{
                         view.alpha = 0;

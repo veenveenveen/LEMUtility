@@ -75,36 +75,38 @@
 }
 
 - (void)btnClick3 {
-    [HMLoading showLoading:HMLoadingStyleSandClock];
+    [LEMToast showLoading:LEMLoadingStyleSandClock];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [HMLoading hideLoading];
+        [LEMToast hideLoading];
     });
 }
 
 - (void)orbitClick4 {
-    [HMLoading showLoading:HMLoadingStyleOrbitView];
+    [LEMToast showLoading:LEMLoadingStyleOrbitView];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [HMLoading hideLoading];
+        [LEMToast hideLoading];
     });
 }
 
 - (void)btnClick5 {
-    [HMLoading showLoading:HMLoadingStyleSystem];
+    [LEMToast showLoading:LEMLoadingStyleSystem];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [HMLoading hideLoading];
+        [LEMToast hideLoading];
     });
 }
 
 - (void)btnClick6 {
-    [HMLoading showToastWithText:@"提示提示提示提示提示提示" time:1.5];
+    [LEMToast showToastWithText:@"提示提示提示提示提示提示" time:1.5];
+    DLog(@"提示提示提示提示提示提示");
+    [[[UIDevice currentDevice] systemVersion] floatValue];
 }
 
 - (void)btnClick7 {
-    [HMLoading showToastWithImage:[UIImage imageNamed:@"com"]];
+    [LEMToast showToastWithImage:[UIImage imageNamed:@"com"]];
 }
 
 - (void)btnClick8 {
-    [HMLoading showToastWithText:@"提示提示提示提示提示提示提示" image:[UIImage imageNamed:@"com"] time:2];
+    [LEMToast showToastWithText:@"提示提示提示提示提示提示提示" image:[UIImage imageNamed:@"com"] time:2];
 }
 
 

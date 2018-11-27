@@ -1,20 +1,20 @@
 //
-//  HMLoading.h
-//  TestAll
+//  LEMToast.h
+//  LEMUtility
 //
-//  Created by 黄启明 on 2018/11/6.
+//  Created by Himin on 2018/11/27.
 //  Copyright © 2018 Himin. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, HMLoadingStyle) {
-    HMLoadingStyleSystem = 0,
-    HMLoadingStyleSandClock = 1,
-    HMLoadingStyleOrbitView = 2
+typedef NS_ENUM(NSInteger, LEMLoadingStyle) {
+    LEMLoadingStyleSystem = 0,
+    LEMLoadingStyleSandClock = 1,
+    LEMLoadingStyleOrbitView = 2
 };
 
-@interface HMLoading : NSObject
+@interface LEMToast : NSObject
 
 // 提示
 
@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, HMLoadingStyle) {
 // 加载
 
 // 加载显示
-+ (void)showLoading:(HMLoadingStyle)loadingStyle;
++ (void)showLoading:(LEMLoadingStyle)loadingStyle;
 // 加载隐藏
 + (void)hideLoading;
 

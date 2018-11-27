@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LEMUtility" #项目名称
-  s.version      = "0.0.7"	# 版本号 与 你仓库的 标签号 对应
+  s.version      = "0.0.8"	# 版本号 与 你仓库的 标签号 对应
   s.summary      = "通用组件" # 项目简介
   s.homepage     = "https://github.com/veenveenveen/LEMUtility" # 主页
   s.license      = "MIT" # 开源证书
@@ -18,13 +18,20 @@ Pod::Spec.new do |s|
   s.resource     = 'LEMUtility/LEMUtility.bundle'
 #s.resources    = 'LEMUtility/**/*.{png,bundle}'
 
-  s.subspec 'Alert' do |ss|
-    ss.source_files = 'LEMUtility/Alert/**/*.{h,m}'
+  s.subspec 'Base' do |ss|
+    ss.source_files = 'LEMUtility/Base/**/*.{h,m}'
+    ss.public_header_files = 'LEMUtility/Base/LEMBase.h'
+  end
+
+  s.subspec 'Toast' do |ss|
+    ss.source_files = 'LEMUtility/Toast/**/*.{h,m}'
+    ss.public_header_files = 'LEMUtility/Toast/LEMToast.h'
     ss.dependency 'LEMUtility/Category'
   end
 
   s.subspec 'Category' do |ss|
     ss.source_files = 'LEMUtility/Category/**/*.{h,m}'
+    ss.public_header_files = 'LEMUtility/Category/LEMCategory.h'
   end
 
 end

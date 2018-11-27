@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E22C10B821AD294B00AB507C /* LEMToast.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C10B721AD294B00AB507C /* LEMToast.m */; };
 		E25B9A3621AB953600411C88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A3521AB953600411C88 /* AppDelegate.m */; };
 		E25B9A3921AB953600411C88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A3821AB953600411C88 /* ViewController.m */; };
 		E25B9A3C21AB953600411C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25B9A3A21AB953600411C88 /* Main.storyboard */; };
 		E25B9A3E21AB953700411C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25B9A3D21AB953700411C88 /* Assets.xcassets */; };
 		E25B9A4121AB953700411C88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25B9A3F21AB953700411C88 /* LaunchScreen.storyboard */; };
 		E25B9A4421AB953700411C88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A4321AB953700411C88 /* main.m */; };
-		E25B9A4F21AB95C000411C88 /* HMLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A4E21AB95C000411C88 /* HMLoading.m */; };
 		E25B9A5221AB95CC00411C88 /* SandClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A5121AB95CC00411C88 /* SandClockView.m */; };
 		E25B9A5521AB95D400411C88 /* XYZOrbitView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A5421AB95D400411C88 /* XYZOrbitView.m */; };
 		E2EDB7FD21ABED620027B427 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EDB7FB21ABED620027B427 /* UIColor+HexColor.m */; };
@@ -22,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E22C10B521AD281D00AB507C /* LEMCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEMCategory.h; sourceTree = "<group>"; };
+		E22C10B621AD294B00AB507C /* LEMToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEMToast.h; sourceTree = "<group>"; };
+		E22C10B721AD294B00AB507C /* LEMToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEMToast.m; sourceTree = "<group>"; };
 		E25B9A3121AB953600411C88 /* LEMUtility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEMUtility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25B9A3421AB953600411C88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E25B9A3521AB953600411C88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,8 +35,6 @@
 		E25B9A4021AB953700411C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E25B9A4221AB953700411C88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E25B9A4321AB953700411C88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E25B9A4D21AB95C000411C88 /* HMLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLoading.h; sourceTree = "<group>"; };
-		E25B9A4E21AB95C000411C88 /* HMLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLoading.m; sourceTree = "<group>"; };
 		E25B9A5021AB95CC00411C88 /* SandClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandClockView.h; sourceTree = "<group>"; };
 		E25B9A5121AB95CC00411C88 /* SandClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandClockView.m; sourceTree = "<group>"; };
 		E25B9A5321AB95D400411C88 /* XYZOrbitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZOrbitView.h; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		E2EDB7FE21ABEECD0027B427 /* NSString+LEM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LEM.h"; sourceTree = "<group>"; };
 		E2EDB7FF21ABEECD0027B427 /* NSString+LEM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LEM.m"; sourceTree = "<group>"; };
 		E2EDB80121AC08AF0027B427 /* LEMUtility.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LEMUtility.bundle; sourceTree = "<group>"; };
+		E2EDB80421ACDFDE0027B427 /* LEMBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEMBase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				E25B9A5621AB971200411C88 /* LEMUtility.h */,
+				E2EDB80321ACDF8A0027B427 /* Base */,
 				E2EDB7FA21ABED3A0027B427 /* Category */,
-				E25B9A4A21AB954500411C88 /* Alert */,
+				E25B9A4A21AB954500411C88 /* Toast */,
 				E25B9A5721ABCA6100411C88 /* Main */,
 				E2EDB80121AC08AF0027B427 /* LEMUtility.bundle */,
 				E25B9A3421AB953600411C88 /* AppDelegate.h */,
@@ -94,15 +97,15 @@
 			path = LEMUtility;
 			sourceTree = "<group>";
 		};
-		E25B9A4A21AB954500411C88 /* Alert */ = {
+		E25B9A4A21AB954500411C88 /* Toast */ = {
 			isa = PBXGroup;
 			children = (
-				E25B9A4D21AB95C000411C88 /* HMLoading.h */,
-				E25B9A4E21AB95C000411C88 /* HMLoading.m */,
+				E22C10B621AD294B00AB507C /* LEMToast.h */,
+				E22C10B721AD294B00AB507C /* LEMToast.m */,
 				E25B9A4C21AB95A300411C88 /* XYZOrbitView */,
 				E25B9A4B21AB959900411C88 /* SandClock */,
 			);
-			path = Alert;
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		E25B9A4B21AB959900411C88 /* SandClock */ = {
@@ -133,12 +136,21 @@
 		E2EDB7FA21ABED3A0027B427 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E22C10B521AD281D00AB507C /* LEMCategory.h */,
 				E2EDB7FC21ABED620027B427 /* UIColor+HexColor.h */,
 				E2EDB7FB21ABED620027B427 /* UIColor+HexColor.m */,
 				E2EDB7FE21ABEECD0027B427 /* NSString+LEM.h */,
 				E2EDB7FF21ABEECD0027B427 /* NSString+LEM.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		E2EDB80321ACDF8A0027B427 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E2EDB80421ACDFDE0027B427 /* LEMBase.h */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,9 +228,9 @@
 				E25B9A3921AB953600411C88 /* ViewController.m in Sources */,
 				E2EDB80021ABEECD0027B427 /* NSString+LEM.m in Sources */,
 				E25B9A5221AB95CC00411C88 /* SandClockView.m in Sources */,
-				E25B9A4F21AB95C000411C88 /* HMLoading.m in Sources */,
 				E25B9A4421AB953700411C88 /* main.m in Sources */,
 				E25B9A3621AB953600411C88 /* AppDelegate.m in Sources */,
+				E22C10B821AD294B00AB507C /* LEMToast.m in Sources */,
 				E25B9A5521AB95D400411C88 /* XYZOrbitView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
