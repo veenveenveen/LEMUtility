@@ -41,7 +41,6 @@
 		E22C10BD21AD392900AB507C /* XYZRouterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZRouterManager.h; sourceTree = "<group>"; };
 		E22C10BE21AD392900AB507C /* UIViewController+XYZRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XYZRouter.m"; sourceTree = "<group>"; };
 		E22C10BF21AD392A00AB507C /* UIViewController+XYZRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XYZRouter.h"; sourceTree = "<group>"; };
-		E22C10C021AD392A00AB507C /* XYZRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZRouter.h; sourceTree = "<group>"; };
 		E22C10C121AD392A00AB507C /* XYZRouterComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZRouterComponent.h; sourceTree = "<group>"; };
 		E22C10C221AD392A00AB507C /* XYZRouterComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYZRouterComponent.m; sourceTree = "<group>"; };
 		E22C10C321AD392A00AB507C /* XYZRouterURLConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZRouterURLConfig.h; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		E22C10D721AD3D0400AB507C /* UIView+LEMFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LEMFrame.m"; sourceTree = "<group>"; };
 		E22C10D921AD451700AB507C /* NSString+LEMSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+LEMSize.h"; sourceTree = "<group>"; };
 		E22C10DA21AD451700AB507C /* NSString+LEMSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+LEMSize.m"; sourceTree = "<group>"; };
+		E22C10DC21AD553000AB507C /* LEMRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEMRouter.h; sourceTree = "<group>"; };
 		E25B9A3121AB953600411C88 /* LEMUtility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEMUtility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25B9A3421AB953600411C88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E25B9A3521AB953600411C88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		E22C10B921AD38D200AB507C /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				E22C10C021AD392A00AB507C /* XYZRouter.h */,
+				E22C10DC21AD553000AB507C /* LEMRouter.h */,
 				E22C10BF21AD392A00AB507C /* UIViewController+XYZRouter.h */,
 				E22C10BE21AD392900AB507C /* UIViewController+XYZRouter.m */,
 				E22C10C121AD392A00AB507C /* XYZRouterComponent.h */,
