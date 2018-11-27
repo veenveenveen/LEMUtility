@@ -25,13 +25,13 @@ Pod::Spec.new do |s|
 
   s.subspec 'Toast' do |ss|
     ss.source_files = 'LEMUtility/Toast/**/*.{h,m}'
-    ss.public_header_files = 'LEMUtility/Toast/LEMToast.h'
+# ss.public_header_files = 'LEMUtility/Toast/LEMToast.h'
     ss.dependency 'LEMUtility/Category'
   end
 
   s.subspec 'Category' do |ss|
     ss.source_files = 'LEMUtility/Category/**/*.{h,m}'
-    ss.public_header_files = 'LEMUtility/Category/LEMCategory.h'
+#  ss.public_header_files = 'LEMUtility/Category/LEMCategory.h'
   end
 
 end

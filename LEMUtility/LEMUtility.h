@@ -16,7 +16,9 @@
 #import "LEMBase.h"
 
 // category
-#import "LEMCategory.h"
+//#import "LEMCategory.h"
+#import "UIColor+HexColor.h"
+#import "NSString+LEM.h"
 
 
 #endif /* LEMUtility_h */
