@@ -12,7 +12,7 @@
 #import "XYZOrbitView.h"
 
 #import "UIColor+HexColor.h"
-#import "NSString+LEM.h"
+#import "NSString+LEMSize.h"
 
 #define pUIScreenWidth [UIScreen mainScreen].bounds.size.width
 #define pUIScreenHeight [UIScreen mainScreen].bounds.size.height
