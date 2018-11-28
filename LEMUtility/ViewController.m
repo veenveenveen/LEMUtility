@@ -80,7 +80,16 @@
                                     textFont:[UIFont systemFontOfSize:15] textColor:UIColor.lightGrayColor
                                        click:^(id sender) {
                                            DLog(@"%@",sender);
-                                           [LEMToast showToastWithText:@"提示提示提示提示提示提示提示" image:kImageName(@"icon_delete") time:2];
+                                           
+                                           LEMToastConfig *config = [[LEMToastConfig alloc] init];
+                                           config.textFont = [UIFont systemFontOfSize:14];
+                                           config.textColor = UIColor.brownColor;
+                                           config.contentMode = UIViewContentModeScaleAspectFit;
+                                           config.imageHeight = 20;
+                                           
+                                           [LEMToast showToastWithConfig:config text:@"示提示提示示" image:kImageName(@"icon_delete") time:2];
+                                           
+//                                           [LEMToast showToastWithText:@"提示提示提示提示提示提示提示" image:kImageName(@"icon_delete") time:2];
                                        }];
         [btn setButtonImagePosition:LEMButtonImagePositionTop];
         [self.view addSubview:btn];
@@ -109,7 +118,14 @@
 }
 
 - (void)btnClick6 {
-    [LEMToast showToastWithText:@"提示提示提示提示提示提示" time:1.5];
+    LEMToastConfig *config = [[LEMToastConfig alloc] init];
+    config.backgroundColor = UIColor.orangeColor;
+    config.textFont = [UIFont systemFontOfSize:15];
+    config.textColor = UIColor.brownColor;
+//    config.toastWidth = 155;
+    
+    [LEMToast showToastWithConfig:config text:@"提示提示提" time:2];
+//    [LEMToast showToastWithText:@"提示提示提示提示提示提示提示提示提示" time:1.5];
     DLog(@"提示提示提示提示提示提示");
     [[[UIDevice currentDevice] systemVersion] floatValue];
     
@@ -126,11 +142,26 @@
 }
 
 - (void)btnClick7 {
-    [LEMToast showToastWithImage:[UIImage imageNamed:@"com"]];
+    LEMToastConfig *config = [[LEMToastConfig alloc] init];
+    config.backgroundColor = UIColor.orangeColor;
+    config.textFont = [UIFont systemFontOfSize:12];
+    config.textColor = UIColor.brownColor;
+    config.toastWidth = 60;
+    
+    config.contentMode = UIViewContentModeScaleAspectFit;
+    config.imageHeight = 30;
+    
+    [LEMToast showToastWithConfig:config text:nil image:kImageName(@"icon_delete") time:2];
+//    [LEMToast showToastWithImage:[UIImage imageNamed:@"com"]];
 }
 
 - (void)btnClick8 {
-    [LEMToast showToastWithText:@"提示提示提示提示提示提示提示" image:[UIImage imageNamed:@"com"] time:2];
+    LEMToastConfig *config = [[LEMToastConfig alloc] init];
+    
+    config.contentMode = UIViewContentModeScaleAspectFit;
+    config.imageHeight = 30;
+    
+    [LEMToast showToastWithConfig:config text:@"提示提示提" image:[UIImage imageNamed:@"com"] time:2];
 }
 
 
