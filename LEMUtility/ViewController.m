@@ -72,6 +72,19 @@
         
         [self.view addSubview:btn];
     }
+    
+    {
+        UIButton *btn = [UIButton buttonWith:CGRectMake(40, 260, 140, 180)
+                                       image:kImageName(@"icon_delete")
+                                        text:@"文字/图片"
+                                    textFont:[UIFont systemFontOfSize:15] textColor:UIColor.lightGrayColor
+                                       click:^(id sender) {
+                                           DLog(@"%@",sender);
+                                           [LEMToast showToastWithText:@"提示提示提示提示提示提示提示" image:kImageName(@"icon_delete") time:2];
+                                       }];
+        [btn setButtonImagePosition:LEMButtonImagePositionTop];
+        [self.view addSubview:btn];
+    }
 }
 
 - (void)btnClick3 {
@@ -99,6 +112,17 @@
     [LEMToast showToastWithText:@"提示提示提示提示提示提示" time:1.5];
     DLog(@"提示提示提示提示提示提示");
     [[[UIDevice currentDevice] systemVersion] floatValue];
+    
+    NSString *str = @"2018 11 28";
+    
+    NSTimeInterval interval = [NSDate getTimestampWithDateString:str];
+    DLog(@"%@",@[@(interval)]);
+    
+    NSString *year = [NSDate getYearWithDateString:str];
+    NSString *month = [NSDate getMonthWithDateString:str];
+    NSString *day = [NSDate getDayWithDateString:str];
+    NSString *week = [NSDate getWeekWithDateString:str];
+    DLog(@"%@",@[year,month,day,week]);
 }
 
 - (void)btnClick7 {

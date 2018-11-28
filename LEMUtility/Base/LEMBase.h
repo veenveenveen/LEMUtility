@@ -149,7 +149,7 @@ return self;\
 
 // 开发的时候打印，但是发布的时候不打印的NSLog
 #ifdef DEBUG
-#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define DLog(fmt, ...) NSLog((@"%s [Line %d]\n" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
 #define DLog(...)
 #define NSLog(...)
@@ -174,9 +174,9 @@ blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 #define kBgColor [UIColor colorWithRed:242.0/255.0 green:236.0/255.0 blue:231.0/255.0 alpha:1.0]
 
 // 读取本地图片
-#define kLoadImage(file,ext) [UIImage imageWithContentsOfFile:[NSBundle mainBundle] pathForResource:file ofType:ext]
+#define kLoadImage(file,ext) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:file ofType:ext]]
 // 定义UIImage对象（路径）
-#define kImage(name) [UIImage imageWithContentsOfFile:[NSBundle mainBundle] pathForResource:name ofType:nil]
+#define kImage(name) [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:nil]]
 // 定义UIImage对象
 #define kImageName(str) [UIImage imageNamed:str inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil]
 
