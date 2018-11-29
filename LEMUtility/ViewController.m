@@ -81,15 +81,14 @@
                                        click:^(id sender) {
                                            DLog(@"%@",sender);
                                            
-                                           LEMToastConfig *config = [[LEMToastConfig alloc] init];
-                                           config.textFont = [UIFont systemFontOfSize:14];
-                                           config.textColor = UIColor.brownColor;
-                                           config.contentMode = UIViewContentModeScaleAspectFit;
-                                           config.imageHeight = 20;
+//                                           LEMToastConfig *config = [[LEMToastConfig alloc] init];
+//                                           config.textFont = [UIFont systemFontOfSize:14];
+//                                           config.textColor = UIColor.brownColor;
+//                                           config.contentMode = UIViewContentModeScaleAspectFit;
+//                                           config.imageHeight = 20;
+//                                           [LEMToast showToastWithConfig:config text:@"示提示提示示" image:kImageName(@"icon_delete") time:2];
                                            
-                                           [LEMToast showToastWithConfig:config text:@"示提示提示示" image:kImageName(@"icon_delete") time:2];
-                                           
-//                                           [LEMToast showToastWithText:@"提示提示提示提示提示提示提示" image:kImageName(@"icon_delete") time:2];
+                                           [LEMToast showToastWithText:@"提示提示提示提示提示提示提示" image:kImageName(@"icon_delete") time:2];
                                        }];
         [btn setButtonImagePosition:LEMButtonImagePositionTop];
         [self.view addSubview:btn];
@@ -118,50 +117,49 @@
 }
 
 - (void)btnClick6 {
-    LEMToastConfig *config = [[LEMToastConfig alloc] init];
-    config.backgroundColor = UIColor.orangeColor;
-    config.textFont = [UIFont systemFontOfSize:15];
-    config.textColor = UIColor.brownColor;
-//    config.toastWidth = 155;
+//    LEMToastConfig *config = [[LEMToastConfig alloc] init];
+//    config.backgroundColor = UIColor.orangeColor;
+//    config.textFont = [UIFont systemFontOfSize:15];
+//    config.textColor = UIColor.brownColor;
     
-    [LEMToast showToastWithConfig:config text:@"提示提示提" time:2];
-//    [LEMToast showToastWithText:@"提示提示提示提示提示提示提示提示提示" time:1.5];
-    DLog(@"提示提示提示提示提示提示");
-    [[[UIDevice currentDevice] systemVersion] floatValue];
+//    [LEMToast showToastWithConfig:config text:@"提示" time:2];
+    [LEMToast showToastWithText:@"提示提示提"];
     
-    NSString *str = @"2018 11 28";
-    
-    NSTimeInterval interval = [NSDate getTimestampWithDateString:str];
-    DLog(@"%@",@[@(interval)]);
-    
-    NSString *year = [NSDate getYearWithDateString:str];
-    NSString *month = [NSDate getMonthWithDateString:str];
-    NSString *day = [NSDate getDayWithDateString:str];
-    NSString *week = [NSDate getWeekWithDateString:str];
-    DLog(@"%@",@[year,month,day,week]);
+//
+//    NSString *str = @"2018 11 28";
+//
+//    NSTimeInterval interval = [NSDate getTimestampWithDateString:str];
+//    DLog(@"%@",@[@(interval)]);
+//
+//    NSString *year = [NSDate getYearWithDateString:str];
+//    NSString *month = [NSDate getMonthWithDateString:str];
+//    NSString *day = [NSDate getDayWithDateString:str];
+//    NSString *week = [NSDate getWeekWithDateString:str];
+//    DLog(@"%@",@[year,month,day,week]);
 }
 
 - (void)btnClick7 {
-    LEMToastConfig *config = [[LEMToastConfig alloc] init];
-    config.backgroundColor = UIColor.orangeColor;
-    config.textFont = [UIFont systemFontOfSize:12];
-    config.textColor = UIColor.brownColor;
-    config.toastWidth = 60;
+//    LEMToastConfig *config = [[LEMToastConfig alloc] init];
+//    config.backgroundColor = UIColor.orangeColor;
+//    config.textFont = [UIFont systemFontOfSize:12];
+//    config.textColor = UIColor.brownColor;
+//    config.toastWidth = 60;
+//
+//    config.contentMode = UIViewContentModeScaleAspectFit;
+//    config.imageHeight = 30;
     
-    config.contentMode = UIViewContentModeScaleAspectFit;
-    config.imageHeight = 30;
-    
-    [LEMToast showToastWithConfig:config text:nil image:kImageName(@"icon_delete") time:2];
-//    [LEMToast showToastWithImage:[UIImage imageNamed:@"com"]];
+//    [LEMToast showToastWithConfig:config text:nil image:kImageName(@"icon_delete") time:2];
+    [LEMToast showToastWithImage:[UIImage imageNamed:@"icon_delete"]];
 }
 
 - (void)btnClick8 {
     LEMToastConfig *config = [[LEMToastConfig alloc] init];
     
-    config.contentMode = UIViewContentModeScaleAspectFit;
-    config.imageHeight = 30;
+//    config.contentMode = UIViewContentModeScaleAspectFit;
+//    config.toastWidth = 200;
+//    config.imageHeight = 30;
     
-    [LEMToast showToastWithConfig:config text:@"提示提示提" image:[UIImage imageNamed:@"com"] time:2];
+    [LEMToast showToastWithConfig:config text:nil image:kImageName(@"com") time:2];
 }
 
 
