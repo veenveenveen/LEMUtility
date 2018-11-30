@@ -46,7 +46,6 @@ static NSInteger waitingTime = 0;
 + (void)showToastWithText:(NSString *)text time:(NSTimeInterval)timeInterval {
     [self showToastWithConfig:nil text:text time:timeInterval];
 }
-
 // 自定义配置的文字提示
 + (void)showToastWithConfig:(LEMToastConfig *)toastConfig text:(NSString *)text time:(NSTimeInterval)timeInterval {
     [self showToastWithConfig:toastConfig text:text image:nil time:timeInterval];
@@ -132,6 +131,7 @@ static NSInteger waitingTime = 0;
             }
         }
     }
+    
     [self showToastWithText:text textFont:textFont textColor:textColor image:image imageHeight:imageHeight imageContentMode:contentMode backgroundColor:backgroundColor toastWidth:toastWidth viewCornerRadius:cornerRadius time:timeInterval];
 }
 

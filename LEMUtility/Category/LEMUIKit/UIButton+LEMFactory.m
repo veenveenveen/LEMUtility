@@ -9,9 +9,11 @@
 #import "UIButton+LEMFactory.h"
 #import <objc/runtime.h>
 
-static char buttonClickKey;
+static char actionKey;
 
 @implementation UIButton (LEMFactory)
+
+#pragma mark - 按钮构造方法
 
 + (UIButton *)textButtonWith:(CGRect)frame text:(NSString *)text textFont:(UIFont *)font textColor:(UIColor *)textColor click:(LEMButtonClickBlock)clickBlock {
     return [self buttonWith:frame image:nil text:text textFont:font textColor:textColor click:clickBlock];
@@ -35,15 +37,24 @@ static char buttonClickKey;
     }
     btn.exclusiveTouch = YES;
     if (clickBlock) {
-        objc_setAssociatedObject(self, &buttonClickKey, clickBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
-        [btn addTarget:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+        [btn addClickBlock:clickBlock];
     }
     return btn;
 }
 
-// button action
-+ (void)buttonDidClick:(id)sender {
-    LEMButtonClickBlock block = (LEMButtonClickBlock)objc_getAssociatedObject(self, &buttonClickKey);
+#pragma mark - 添加按钮事件
+
+- (void)addClickBlock:(LEMButtonClickBlock)clickBlock {
+    [self addTargetBlock:clickBlock forControlEvent:UIControlEventTouchUpInside];
+}
+
+- (void)addTargetBlock:(LEMButtonClickBlock)targetBlock forControlEvent:(UIControlEvents)controlEvent {
+    objc_setAssociatedObject(self, &actionKey, targetBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    [self addTarget:self action:@selector(btnDidClick:) forControlEvents:controlEvent];
+}
+
+- (void)btnDidClick:(id)sender {
+    LEMButtonClickBlock block = (LEMButtonClickBlock)objc_getAssociatedObject(self, &actionKey);
     if (block) {
         block(sender);
     }

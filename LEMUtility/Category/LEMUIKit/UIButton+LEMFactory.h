@@ -19,12 +19,32 @@ typedef NS_ENUM(NSUInteger, LEMButtonImagePosition) {
 
 @interface UIButton (LEMFactory)
 
-// factory method
+#pragma mark - factory method
+
+/**
+ * 文本按钮
+ */
 + (UIButton *)textButtonWith:(CGRect)frame text:(NSString *)text textFont:(UIFont *)font textColor:(UIColor *)textColor click:(LEMButtonClickBlock)clickBlock;
+
+/**
+ * 图片按钮
+ */
 + (UIButton *)imageButtonWith:(CGRect)frame image:(UIImage *)image click:(LEMButtonClickBlock)clickBlock;
+
+/**
+ * 文字+图片按钮
+ */
 + (UIButton *)buttonWith:(CGRect)frame image:(UIImage *)image text:(NSString *)text textFont:(UIFont *)font textColor:(UIColor *)textColor click:(LEMButtonClickBlock)clickBlock;
 
-// image/text position
+/**
+ * 使用block形式的target
+ */
+- (void)addClickBlock:(LEMButtonClickBlock)clickBlock; // UIControlEventTouchUpInside
+- (void)addTargetBlock:(LEMButtonClickBlock)targetBlock forControlEvent:(UIControlEvents)controlEvent;
+
+/**
+ * 设置按钮和图片的位置
+ */
 - (void)setButtonImagePosition:(LEMButtonImagePosition)buttonImagePosition;
 
 @end

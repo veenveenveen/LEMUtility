@@ -35,4 +35,7 @@
 #import "UIButton+LEMFactory.h"
 #import "UILabel+LEMFactory.h"
 
+// BlockGesture
+#import "UIView+LEMBlockGesture.h"
+
 #endif /* LEMCategory_h */

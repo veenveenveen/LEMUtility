@@ -32,7 +32,7 @@
             blue  = [self colorComponentFrom:colorString start:2 length:1];
             break;
         case 4: // #ARGB
-            alp = [self colorComponentFrom:colorString start:0 length:1];
+            alp   = [self colorComponentFrom:colorString start:0 length:1];
             red   = [self colorComponentFrom:colorString start:1 length:1];
             green = [self colorComponentFrom:colorString start:2 length:1];
             blue  = [self colorComponentFrom:colorString start:3 length:1];
@@ -43,7 +43,7 @@
             blue  = [self colorComponentFrom:colorString start:4 length:2];
             break;
         case 8: // #AARRGGBB
-            alp = [self colorComponentFrom:colorString start:0 length:2];
+            alp   = [self colorComponentFrom:colorString start:0 length:2];
             red   = [self colorComponentFrom:colorString start:2 length:2];
             green = [self colorComponentFrom:colorString start:4 length:2];
             blue  = [self colorComponentFrom:colorString start:6 length:2];

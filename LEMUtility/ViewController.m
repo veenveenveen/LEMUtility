@@ -77,7 +77,8 @@
         UIButton *btn = [UIButton buttonWith:CGRectMake(40, 260, 140, 180)
                                        image:kImageName(@"icon_delete")
                                         text:@"文字/图片"
-                                    textFont:[UIFont systemFontOfSize:15] textColor:UIColor.lightGrayColor
+                                    textFont:[UIFont systemFontOfSize:15]
+                                   textColor:UIColor.lightGrayColor
                                        click:^(id sender) {
                                            DLog(@"%@",sender);
                                            
@@ -88,7 +89,31 @@
 //                                           config.imageHeight = 20;
 //                                           [LEMToast showToastWithConfig:config text:@"示提示提示示" image:kImageName(@"icon_delete") time:2];
                                            
-                                           [LEMToast showToastWithText:@"提示提示提示提示提示提示提示" image:kImageName(@"icon_delete") time:2];
+                                           [LEMToast showToastWithText:@"删除失败" image:kImageName(@"icon_delete") time:1];
+                                       }];
+        [btn setButtonImagePosition:LEMButtonImagePositionTop];
+        [self.view addSubview:btn];
+    }
+    
+    {
+        UIButton *btn = [UIButton buttonWith:CGRectMake(190, 260, 140, 180)
+                                       image:kImageName(@"icon_delete")
+                                        text:@"文字/文字"
+                                    textFont:[UIFont systemFontOfSize:15]
+                                   textColor:UIColor.lightGrayColor
+                                       click:^(id sender) {
+                                           
+                                           NSString *str = @"2018 11 28";
+                                           
+                                           NSTimeInterval interval = [NSDate getTimestampWithDateString:str];
+                                           DLog(@"%@",@[@(interval)]);
+                                           
+                                           NSString *year = [NSDate getYearWithDateString:str];
+                                           NSString *month = [NSDate getMonthWithDateString:str];
+                                           NSString *day = [NSDate getDayWithDateString:str];
+                                           NSString *week = [NSDate getWeekWithDateString:str];
+                                           DLog(@"%@",@[year,month,day,week]);
+                                           
                                        }];
         [btn setButtonImagePosition:LEMButtonImagePositionTop];
         [self.view addSubview:btn];
@@ -124,18 +149,6 @@
     
 //    [LEMToast showToastWithConfig:config text:@"提示" time:2];
     [LEMToast showToastWithText:@"提示提示提"];
-    
-//
-//    NSString *str = @"2018 11 28";
-//
-//    NSTimeInterval interval = [NSDate getTimestampWithDateString:str];
-//    DLog(@"%@",@[@(interval)]);
-//
-//    NSString *year = [NSDate getYearWithDateString:str];
-//    NSString *month = [NSDate getMonthWithDateString:str];
-//    NSString *day = [NSDate getDayWithDateString:str];
-//    NSString *week = [NSDate getWeekWithDateString:str];
-//    DLog(@"%@",@[year,month,day,week]);
 }
 
 - (void)btnClick7 {
@@ -149,7 +162,8 @@
 //    config.imageHeight = 30;
     
 //    [LEMToast showToastWithConfig:config text:nil image:kImageName(@"icon_delete") time:2];
-    [LEMToast showToastWithImage:[UIImage imageNamed:@"icon_delete"]];
+    [LEMToast showToastWithImage:[UIImage imageNamed:@"icon_detail"]];
+    
 }
 
 - (void)btnClick8 {
