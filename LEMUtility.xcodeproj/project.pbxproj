@@ -33,6 +33,9 @@
 		E272469321AE818600045212 /* XYZStoreHouseRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E272469021AE818500045212 /* XYZStoreHouseRefreshControl.m */; };
 		E272469421AE818600045212 /* XYZBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E272469121AE818500045212 /* XYZBarItem.m */; };
 		E27246B621B0D57500045212 /* UIView+LEMBlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = E27246B521B0D57500045212 /* UIView+LEMBlockGesture.m */; };
+		E27246D621B7AB5E00045212 /* UIView+LEMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27246D521B7AB5E00045212 /* UIView+LEMViewController.m */; };
+		E27246D921B7BCC300045212 /* UIImage+LEMImageType.m in Sources */ = {isa = PBXBuildFile; fileRef = E27246D821B7BCC300045212 /* UIImage+LEMImageType.m */; };
+		E272477921BA569500045212 /* UIImage+LEMImageUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E272477821BA569500045212 /* UIImage+LEMImageUtility.m */; };
 		E2EDB7FD21ABED620027B427 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EDB7FB21ABED620027B427 /* UIColor+HexColor.m */; };
 		E2EDB80221AC08AF0027B427 /* LEMUtility.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2EDB80121AC08AF0027B427 /* LEMUtility.bundle */; };
 /* End PBXBuildFile section */
@@ -91,6 +94,12 @@
 		E272469221AE818600045212 /* XYZStoreHouseRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYZStoreHouseRefreshControl.h; sourceTree = "<group>"; };
 		E27246B421B0D57500045212 /* UIView+LEMBlockGesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LEMBlockGesture.h"; sourceTree = "<group>"; };
 		E27246B521B0D57500045212 /* UIView+LEMBlockGesture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LEMBlockGesture.m"; sourceTree = "<group>"; };
+		E27246D421B7AB5E00045212 /* UIView+LEMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LEMViewController.h"; sourceTree = "<group>"; };
+		E27246D521B7AB5E00045212 /* UIView+LEMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LEMViewController.m"; sourceTree = "<group>"; };
+		E27246D721B7BCC300045212 /* UIImage+LEMImageType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+LEMImageType.h"; sourceTree = "<group>"; };
+		E27246D821B7BCC300045212 /* UIImage+LEMImageType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LEMImageType.m"; sourceTree = "<group>"; };
+		E272477721BA569500045212 /* UIImage+LEMImageUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+LEMImageUtility.h"; sourceTree = "<group>"; };
+		E272477821BA569500045212 /* UIImage+LEMImageUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LEMImageUtility.m"; sourceTree = "<group>"; };
 		E2EDB7FB21ABED620027B427 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
 		E2EDB7FC21ABED620027B427 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
 		E2EDB80121AC08AF0027B427 /* LEMUtility.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LEMUtility.bundle; sourceTree = "<group>"; };
@@ -227,6 +236,12 @@
 				E272468C21AE7CF600045212 /* UILabel+LEMFactory.m */,
 				E27246B421B0D57500045212 /* UIView+LEMBlockGesture.h */,
 				E27246B521B0D57500045212 /* UIView+LEMBlockGesture.m */,
+				E27246D421B7AB5E00045212 /* UIView+LEMViewController.h */,
+				E27246D521B7AB5E00045212 /* UIView+LEMViewController.m */,
+				E27246D721B7BCC300045212 /* UIImage+LEMImageType.h */,
+				E27246D821B7BCC300045212 /* UIImage+LEMImageType.m */,
+				E272477721BA569500045212 /* UIImage+LEMImageUtility.h */,
+				E272477821BA569500045212 /* UIImage+LEMImageUtility.m */,
 			);
 			path = LEMUIKit;
 			sourceTree = "<group>";
@@ -338,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E272477921BA569500045212 /* UIImage+LEMImageUtility.m in Sources */,
 				E272469321AE818600045212 /* XYZStoreHouseRefreshControl.m in Sources */,
 				E22C10C721AD392A00AB507C /* UIViewController+XYZRouter.m in Sources */,
 				E22C10C921AD392A00AB507C /* XYZRouterURLConfig.m in Sources */,
@@ -347,10 +363,12 @@
 				E22C10C821AD392A00AB507C /* XYZRouterComponent.m in Sources */,
 				E25B9A3921AB953600411C88 /* ViewController.m in Sources */,
 				E22C10E921AE38FA00AB507C /* UIButton+LEMFactory.m in Sources */,
+				E27246D621B7AB5E00045212 /* UIView+LEMViewController.m in Sources */,
 				E22C10C621AD392A00AB507C /* XYZRouterURLData.m in Sources */,
 				E272468D21AE7CF600045212 /* UILabel+LEMFactory.m in Sources */,
 				E272469421AE818600045212 /* XYZBarItem.m in Sources */,
 				E22C10D221AD3B2300AB507C /* UIImageView+CircleCorner.m in Sources */,
+				E27246D921B7BCC300045212 /* UIImage+LEMImageType.m in Sources */,
 				E22C10E521AE337700AB507C /* NSDictionary+Description.m in Sources */,
 				E22C10D521AD3BE200AB507C /* UIButton+EnlargeTouchArea.m in Sources */,
 				E22C10DB21AD451700AB507C /* NSString+LEMSize.m in Sources */,

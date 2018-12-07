@@ -24,17 +24,17 @@ typedef NS_ENUM(NSUInteger, LEMButtonImagePosition) {
 /**
  * 文本按钮
  */
-+ (UIButton *)textButtonWith:(CGRect)frame text:(NSString *)text textFont:(UIFont *)font textColor:(UIColor *)textColor click:(LEMButtonClickBlock)clickBlock;
++ (UIButton *)textButtonWithFrame:(CGRect)frame text:(NSString *)text textFont:(UIFont *)font textColor:(UIColor *)textColor click:(LEMButtonClickBlock)clickBlock;
 
 /**
  * 图片按钮
  */
-+ (UIButton *)imageButtonWith:(CGRect)frame image:(UIImage *)image click:(LEMButtonClickBlock)clickBlock;
++ (UIButton *)imageButtonWithFrame:(CGRect)frame image:(UIImage *)image click:(LEMButtonClickBlock)clickBlock;
 
 /**
  * 文字+图片按钮
  */
-+ (UIButton *)buttonWith:(CGRect)frame image:(UIImage *)image text:(NSString *)text textFont:(UIFont *)font textColor:(UIColor *)textColor click:(LEMButtonClickBlock)clickBlock;
++ (UIButton *)buttonWithFrame:(CGRect)frame image:(UIImage *)image text:(NSString *)text textFont:(UIFont *)font textColor:(UIColor *)textColor click:(LEMButtonClickBlock)clickBlock;
 
 /**
  * 使用block形式的target

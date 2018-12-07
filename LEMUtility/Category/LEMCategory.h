@@ -38,4 +38,13 @@
 // BlockGesture
 #import "UIView+LEMBlockGesture.h"
 
+// UIView viewController
+#import "UIView+LEMViewController.h"
+
+// UIImage type
+#import "UIImage+LEMImageType.h"
+
+// UIImage
+#import "UIImage+LEMImageUtility.h"
+
 #endif /* LEMCategory_h */

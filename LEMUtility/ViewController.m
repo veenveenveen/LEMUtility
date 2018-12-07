@@ -74,7 +74,7 @@
     }
     
     {
-        UIButton *btn = [UIButton buttonWith:CGRectMake(40, 260, 140, 180)
+        UIButton *btn = [UIButton buttonWithFrame:CGRectMake(40, 260, 140, 180)
                                        image:kImageName(@"icon_delete")
                                         text:@"文字/图片"
                                     textFont:[UIFont systemFontOfSize:15]
@@ -96,7 +96,7 @@
     }
     
     {
-        UIButton *btn = [UIButton buttonWith:CGRectMake(190, 260, 140, 180)
+        UIButton *btn = [UIButton buttonWithFrame:CGRectMake(190, 260, 140, 180)
                                        image:kImageName(@"icon_delete")
                                         text:@"文字/文字"
                                     textFont:[UIFont systemFontOfSize:15]
@@ -118,6 +118,68 @@
         [btn setButtonImagePosition:LEMButtonImagePositionTop];
         [self.view addSubview:btn];
     }
+    
+    {
+        UIButton *btn = [UIButton textButtonWithFrame:CGRectMake(40, 420, 140, 60) text:@"viewController" textFont:[UIFont systemFontOfSize:15] textColor:UIColor.lightGrayColor click:^(id sender) {
+                                           
+                                           NSLog(@"self = %@",self);
+                                           NSLog(@"self controller = %@",[(UIButton *)sender lem_viewController]);
+                                           
+        }];
+        
+        [self.view addSubview:btn];
+    }
+    {
+        UIButton *btn = [UIButton textButtonWithFrame:CGRectMake(230, 420, 140, 60) text:@"tttt" textFont:[UIFont systemFontOfSize:15] textColor:UIColor.lightGrayColor click:^(id sender) {
+            UIImage *image = [UIImage imageNamed:@"icon_delete"];
+            NSData *data = UIImagePNGRepresentation(image);
+            NSData *data2 = UIImageJPEGRepresentation(image, 0.9);
+//            NSLog(@"png image data = %@",data);
+//            NSLog(@"jpeg image data = %@",data2);
+            
+//            NSLog(@"png image data = %zd",[UIImage imageTypeWithData:data]);
+//            NSLog(@"jpeg image data = %zd",[UIImage imageTypeWithData:data2]);
+            NSLog(@"png image data = %zd",[UIImage YYImageDetectType:CFBridgingRetain(data)]);
+            NSLog(@"jpeg image data = %zd",[UIImage YYImageDetectType:CFBridgingRetain(data2)]);
+        }];
+        
+        [self.view addSubview:btn];
+    }
+    {
+        UIButton *btn = [UIButton textButtonWithFrame:CGRectMake(30, 500, 140, 60) text:@"custom" textFont:[UIFont systemFontOfSize:15] textColor:UIColor.lightGrayColor click:^(id sender) {
+            UIImage *image = [UIImage imageNamed:@"icon_delete"];
+            UIImageView *imgV = [[UIImageView alloc] initWithImage:image];
+            imgV.contentMode = UIViewContentModeCenter;
+            imgV.backgroundColor = UIColor.orangeColor;
+            imgV.layer.cornerRadius = 5;
+            imgV.frame = CGRectMake(20, 60, 35, 35);
+            
+            [LEMToast showToastWithCustomView:imgV time:2];
+            
+//            NSArray *array = @[@"test1", @"test2"];
+//
+//            UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:array applicationActivities:nil];
+//
+//            [self presentViewController:activityVC animated:YES completion:^{
+//                                 NSLog(@"Air");
+//            }];
+            
+            UIImage *img = [UIImage fullScreenImage];
+            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(60, 80, 255, 500)];
+            imgView.contentMode = UIViewContentModeScaleAspectFit;
+            imgView.layer.borderColor = UIColor.lightGrayColor.CGColor;
+            imgView.layer.borderWidth = 0.5;
+            imgView.image = img;
+            [self.view addSubview:imgView];
+        }];
+        
+        [self.view addSubview:btn];
+        
+        
+        
+//        [[[UIView alloc] init] drawViewHierarchyInRect:[UIScreen mainScreen].bounds afterScreenUpdates:NO];
+    }
+    self.view.backgroundColor = UIColor.lightGrayColor;
 }
 
 - (void)btnClick3 {

@@ -231,6 +231,31 @@ static NSInteger waitingTime = 0;
 }
 
 
+/* ---- 自定义显示视图 ---- */
++ (void)showToastWithCustomView:(UIView *)view time:(NSTimeInterval)timeInterval  {
+    UIView *bgView = [[UIView alloc] initWithFrame:pAPPKeyWindow.bounds];
+    bgView.backgroundColor = UIColor.clearColor;
+    bgView.alpha = 0;
+    [pAPPKeyWindow addSubview:bgView];
+    
+    [bgView addSubview:view];
+    
+    view.transform = CGAffineTransformMakeScale(1.3, 1.3);
+    [UIView animateWithDuration:0.3 animations:^{
+        bgView.alpha = 1;
+        view.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(timeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [UIView animateWithDuration:0.3 animations:^{
+                bgView.alpha = 0;
+                view.transform = CGAffineTransformMakeScale(0.1, 0.1);
+            } completion:^(BOOL finished) {
+                [bgView removeFromSuperview];
+            }];
+        });
+    }];
+}
+
 #pragma mark - 加载Loading
 
 + (void)showLoading:(LEMLoadingStyle)loadingStyle {

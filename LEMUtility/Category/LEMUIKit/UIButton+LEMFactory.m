@@ -15,15 +15,15 @@ static char actionKey;
 
 #pragma mark - 按钮构造方法
 
-+ (UIButton *)textButtonWith:(CGRect)frame text:(NSString *)text textFont:(UIFont *)font textColor:(UIColor *)textColor click:(LEMButtonClickBlock)clickBlock {
-    return [self buttonWith:frame image:nil text:text textFont:font textColor:textColor click:clickBlock];
++ (UIButton *)textButtonWithFrame:(CGRect)frame text:(NSString *)text textFont:(UIFont *)font textColor:(UIColor *)textColor click:(LEMButtonClickBlock)clickBlock {
+    return [self buttonWithFrame:frame image:nil text:text textFont:font textColor:textColor click:clickBlock];
 }
 
-+ (UIButton *)imageButtonWith:(CGRect)frame image:(UIImage *)image click:(LEMButtonClickBlock)clickBlock {
-    return [self buttonWith:frame image:image text:nil textFont:nil textColor:nil click:clickBlock];
++ (UIButton *)imageButtonWithFrame:(CGRect)frame image:(UIImage *)image click:(LEMButtonClickBlock)clickBlock {
+    return [self buttonWithFrame:frame image:image text:nil textFont:nil textColor:nil click:clickBlock];
 }
 
-+ (UIButton *)buttonWith:(CGRect)frame image:(UIImage *)image text:(NSString *)text textFont:(UIFont *)font textColor:(UIColor *)textColor click:(LEMButtonClickBlock)clickBlock {
++ (UIButton *)buttonWithFrame:(CGRect)frame image:(UIImage *)image text:(NSString *)text textFont:(UIFont *)font textColor:(UIColor *)textColor click:(LEMButtonClickBlock)clickBlock {
     UIButton *btn = [[UIButton alloc] initWithFrame:frame];
     if (image) {
         [btn setImage:image forState:UIControlStateNormal];

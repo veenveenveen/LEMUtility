@@ -60,6 +60,9 @@ typedef NS_ENUM(NSInteger, LEMLoadingStyle) {
 // 自定义配置的图片和文字提示
 + (void)showToastWithConfig:(LEMToastConfig *)toastConfig text:(NSString *)text image:(UIImage *)image time:(NSTimeInterval)timeInterval;
 
+/* ---- 自定义显示视图 ---- */
++ (void)showToastWithCustomView:(UIView *)view time:(NSTimeInterval)timeInterval ;
+
 /* ------ 加载 ------ */
 
 // 加载显示
