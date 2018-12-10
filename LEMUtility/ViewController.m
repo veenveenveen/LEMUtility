@@ -7,7 +7,21 @@
 //
 
 #import "ViewController.h"
+
 #import "LEMUtility.h"
+#import "LEMCategory.h"
+
+// Toast
+#import "LEMToast.h"
+
+// Router
+//#import "LEMRouter.h"
+
+// XYZStoreHouseRefreshControl
+//#import "XYZStoreHouseRefreshControl.h"
+
+// 系统各种权限的判断
+#import "LEMSystemAuthorization.h"
 
 @interface ViewController ()
 
@@ -17,6 +31,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        // 网络请求完成之后就会执行，NSURLSession自动实现多线程
+        NSLog(@"%@",[NSThread currentThread]);
+        if (data && (error == nil)) {
+            // 网络访问成功
+            NSLog(@"data=%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        } else {
+            // 网络访问失败
+            NSLog(@"error=%@",error);
+        }
+    }];
+    
+    // 5.每一个任务默认都是挂起的，需要调用 resume 方法
+    [dataTask resume];
     
     {
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(40, 140, 100, 40)];
@@ -120,7 +153,7 @@
     }
     
     {
-        UIButton *btn = [UIButton textButtonWithFrame:CGRectMake(40, 420, 140, 60) text:@"viewController" textFont:[UIFont systemFontOfSize:15] textColor:UIColor.lightGrayColor click:^(id sender) {
+        UIButton *btn = [UIButton textButtonWithFrame:CGRectMake(40, 420, 140, 60) text:@"viewController" textFont:[UIFont systemFontOfSize:15] textColor:UIColor.greenColor click:^(id sender) {
                                            
                                            NSLog(@"self = %@",self);
                                            NSLog(@"self controller = %@",[(UIButton *)sender lem_viewController]);
@@ -130,7 +163,7 @@
         [self.view addSubview:btn];
     }
     {
-        UIButton *btn = [UIButton textButtonWithFrame:CGRectMake(230, 420, 140, 60) text:@"tttt" textFont:[UIFont systemFontOfSize:15] textColor:UIColor.lightGrayColor click:^(id sender) {
+        UIButton *btn = [UIButton textButtonWithFrame:CGRectMake(230, 420, 140, 60) text:@"tttt" textFont:[UIFont systemFontOfSize:15] textColor:UIColor.greenColor click:^(id sender) {
             UIImage *image = [UIImage imageNamed:@"icon_delete"];
             NSData *data = UIImagePNGRepresentation(image);
             NSData *data2 = UIImageJPEGRepresentation(image, 0.9);
@@ -141,12 +174,13 @@
 //            NSLog(@"jpeg image data = %zd",[UIImage imageTypeWithData:data2]);
             NSLog(@"png image data = %zd",[UIImage YYImageDetectType:CFBridgingRetain(data)]);
             NSLog(@"jpeg image data = %zd",[UIImage YYImageDetectType:CFBridgingRetain(data2)]);
+            
         }];
         
         [self.view addSubview:btn];
     }
     {
-        UIButton *btn = [UIButton textButtonWithFrame:CGRectMake(30, 500, 140, 60) text:@"custom" textFont:[UIFont systemFontOfSize:15] textColor:UIColor.lightGrayColor click:^(id sender) {
+        UIButton *btn = [UIButton textButtonWithFrame:CGRectMake(30, 500, 140, 60) text:@"custom" textFont:[UIFont systemFontOfSize:15] textColor:UIColor.greenColor click:^(id sender) {
             UIImage *image = [UIImage imageNamed:@"icon_delete"];
             UIImageView *imgV = [[UIImageView alloc] initWithImage:image];
             imgV.contentMode = UIViewContentModeCenter;
@@ -175,10 +209,19 @@
         
         [self.view addSubview:btn];
         
-        
-        
 //        [[[UIView alloc] init] drawViewHierarchyInRect:[UIScreen mainScreen].bounds afterScreenUpdates:NO];
     }
+    
+    {
+        UIButton *btn = [UIButton textButtonWithFrame:CGRectMake(180, 500, 140, 60) text:@"network" textFont:[UIFont systemFontOfSize:15] textColor:UIColor.greenColor click:^(id sender) {
+            
+            [LEMSystemAuthorization hasNetWorkAuthorization];
+            
+        }];
+        
+        [self.view addSubview:btn];
+    }
+    
     self.view.backgroundColor = UIColor.lightGrayColor;
 }
 

@@ -23,9 +23,7 @@
 		E22C10E921AE38FA00AB507C /* UIButton+LEMFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C10E821AE38FA00AB507C /* UIButton+LEMFactory.m */; };
 		E25B9A3621AB953600411C88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A3521AB953600411C88 /* AppDelegate.m */; };
 		E25B9A3921AB953600411C88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A3821AB953600411C88 /* ViewController.m */; };
-		E25B9A3C21AB953600411C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25B9A3A21AB953600411C88 /* Main.storyboard */; };
 		E25B9A3E21AB953700411C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25B9A3D21AB953700411C88 /* Assets.xcassets */; };
-		E25B9A4121AB953700411C88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25B9A3F21AB953700411C88 /* LaunchScreen.storyboard */; };
 		E25B9A4421AB953700411C88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A4321AB953700411C88 /* main.m */; };
 		E25B9A5221AB95CC00411C88 /* SandClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A5121AB95CC00411C88 /* SandClockView.m */; };
 		E25B9A5521AB95D400411C88 /* XYZOrbitView.m in Sources */ = {isa = PBXBuildFile; fileRef = E25B9A5421AB95D400411C88 /* XYZOrbitView.m */; };
@@ -36,6 +34,9 @@
 		E27246D621B7AB5E00045212 /* UIView+LEMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27246D521B7AB5E00045212 /* UIView+LEMViewController.m */; };
 		E27246D921B7BCC300045212 /* UIImage+LEMImageType.m in Sources */ = {isa = PBXBuildFile; fileRef = E27246D821B7BCC300045212 /* UIImage+LEMImageType.m */; };
 		E272477921BA569500045212 /* UIImage+LEMImageUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = E272477821BA569500045212 /* UIImage+LEMImageUtility.m */; };
+		E272478021BA686500045212 /* LEMSystemAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = E272477F21BA686500045212 /* LEMSystemAuthorization.m */; };
+		E272478621BE0D9E00045212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E272478521BE0D9E00045212 /* Main.storyboard */; };
+		E272478821BE0E6900045212 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E272478721BE0E6900045212 /* Launch.storyboard */; };
 		E2EDB7FD21ABED620027B427 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EDB7FB21ABED620027B427 /* UIColor+HexColor.m */; };
 		E2EDB80221AC08AF0027B427 /* LEMUtility.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2EDB80121AC08AF0027B427 /* LEMUtility.bundle */; };
 /* End PBXBuildFile section */
@@ -76,9 +77,7 @@
 		E25B9A3521AB953600411C88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E25B9A3721AB953600411C88 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E25B9A3821AB953600411C88 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E25B9A3B21AB953600411C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E25B9A3D21AB953700411C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E25B9A4021AB953700411C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E25B9A4221AB953700411C88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E25B9A4321AB953700411C88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E25B9A5021AB95CC00411C88 /* SandClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandClockView.h; sourceTree = "<group>"; };
@@ -100,6 +99,10 @@
 		E27246D821B7BCC300045212 /* UIImage+LEMImageType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LEMImageType.m"; sourceTree = "<group>"; };
 		E272477721BA569500045212 /* UIImage+LEMImageUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+LEMImageUtility.h"; sourceTree = "<group>"; };
 		E272477821BA569500045212 /* UIImage+LEMImageUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LEMImageUtility.m"; sourceTree = "<group>"; };
+		E272477E21BA686500045212 /* LEMSystemAuthorization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEMSystemAuthorization.h; sourceTree = "<group>"; };
+		E272477F21BA686500045212 /* LEMSystemAuthorization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEMSystemAuthorization.m; sourceTree = "<group>"; };
+		E272478521BE0D9E00045212 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E272478721BE0E6900045212 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		E2EDB7FB21ABED620027B427 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
 		E2EDB7FC21ABED620027B427 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
 		E2EDB80121AC08AF0027B427 /* LEMUtility.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LEMUtility.bundle; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 				E2EDB80321ACDF8A0027B427 /* Base */,
 				E2EDB7FA21ABED3A0027B427 /* Category */,
 				E25B9A4A21AB954500411C88 /* Toast */,
+				E272477A21BA609300045212 /* SystemAuthority */,
 				E22C10B921AD38D200AB507C /* Router */,
 				E272468E21AE817100045212 /* XYZStoreHouseRefreshControl */,
 				E22C10E621AE359C00AB507C /* RefreshControl */,
@@ -174,9 +178,9 @@
 				E25B9A3521AB953600411C88 /* AppDelegate.m */,
 				E25B9A3721AB953600411C88 /* ViewController.h */,
 				E25B9A3821AB953600411C88 /* ViewController.m */,
-				E25B9A3A21AB953600411C88 /* Main.storyboard */,
+				E272478521BE0D9E00045212 /* Main.storyboard */,
+				E272478721BE0E6900045212 /* Launch.storyboard */,
 				E25B9A3D21AB953700411C88 /* Assets.xcassets */,
-				E25B9A3F21AB953700411C88 /* LaunchScreen.storyboard */,
 				E25B9A4221AB953700411C88 /* Info.plist */,
 				E25B9A4321AB953700411C88 /* main.m */,
 			);
@@ -255,6 +259,15 @@
 				E272469021AE818500045212 /* XYZStoreHouseRefreshControl.m */,
 			);
 			path = XYZStoreHouseRefreshControl;
+			sourceTree = "<group>";
+		};
+		E272477A21BA609300045212 /* SystemAuthority */ = {
+			isa = PBXGroup;
+			children = (
+				E272477E21BA686500045212 /* LEMSystemAuthorization.h */,
+				E272477F21BA686500045212 /* LEMSystemAuthorization.m */,
+			);
+			path = SystemAuthority;
 			sourceTree = "<group>";
 		};
 		E2EDB7FA21ABED3A0027B427 /* Category */ = {
@@ -339,10 +352,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E25B9A4121AB953700411C88 /* LaunchScreen.storyboard in Resources */,
+				E272478621BE0D9E00045212 /* Main.storyboard in Resources */,
 				E25B9A3E21AB953700411C88 /* Assets.xcassets in Resources */,
-				E25B9A3C21AB953600411C88 /* Main.storyboard in Resources */,
 				E2EDB80221AC08AF0027B427 /* LEMUtility.bundle in Resources */,
+				E272478821BE0E6900045212 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +372,7 @@
 				E22C10C921AD392A00AB507C /* XYZRouterURLConfig.m in Sources */,
 				E2EDB7FD21ABED620027B427 /* UIColor+HexColor.m in Sources */,
 				E22C10DF21AE26DB00AB507C /* NSDate+LEMTime.m in Sources */,
+				E272478021BA686500045212 /* LEMSystemAuthorization.m in Sources */,
 				E22C10D821AD3D0400AB507C /* UIView+LEMFrame.m in Sources */,
 				E22C10C821AD392A00AB507C /* XYZRouterComponent.m in Sources */,
 				E25B9A3921AB953600411C88 /* ViewController.m in Sources */,
@@ -384,25 +398,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E25B9A3A21AB953600411C88 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E25B9A3B21AB953600411C88 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E25B9A3F21AB953700411C88 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E25B9A4021AB953700411C88 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E25B9A4521AB953700411C88 /* Debug */ = {
