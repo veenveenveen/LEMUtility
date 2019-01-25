@@ -64,6 +64,7 @@
 // TabBar高度
 #define kTabBarHeight (49 + kBottomSafeHeight)
 // 状态栏高度
+//UIApplication.sharedApplication.statusBarFrame.size.height
 #define kStatusBarHeight (kIsFullScreen ? 44 : 20)
 // 导航栏高度
 #define kNavBarHeight 44

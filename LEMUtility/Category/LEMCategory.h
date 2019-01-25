@@ -47,4 +47,10 @@
 // UIImage
 #import "UIImage+LEMImageUtility.h"
 
+// 字体样式
+#import "UIFont+Fonts.h"
+
+// 图片效果 模糊和灰度
+#import "UIImage+ImageEffects.h"
+
 #endif /* LEMCategory_h */

@@ -39,5 +39,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FZKaiTiJianTi.ttf</string>
+		<string>FZYingBiKaiShu_GBK.ttf</string>
+		<string>HTSuiXing.ttf</string>
+		<string>MiniJianXI.TTF</string>
+	</array>
 </dict>
 </plist>
